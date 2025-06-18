@@ -27,13 +27,13 @@
         "pragmaticToaster.minSaves": {
           "type": "number",
           "default": 5,
-          "minimum": 1,
+          "minimum": 0,
           "description": "Minimum number of file saves before a Pragmatic Tip is shown."
         },
         "pragmaticToaster.maxSaves": {
           "type": "number",
           "default": 10,
-          "minimum": 1,
+          "minimum": 0,
           "description": "Maximum number of file saves before a Pragmatic Tip is shown."
         }
       }
