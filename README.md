@@ -36,7 +36,7 @@ TODO: approval from Prag Prog.
 
 ## License
 
-Licensed under the MIT license ([LICENSE-MIT](./LICENSE-MIT) or <http://opensource.org/licenses/MIT>).
+Licensed under the MIT license ([LICENSE](./LICENSE) or <http://opensource.org/licenses/MIT>).
 
 ## Release Notes
 
