@@ -34,6 +34,10 @@ TODO: approval from Prag Prog.
 [imaginationlol]: https://www.flaticon.com/authors/imaginationlol
 [Flaticon]: https://www.flaticon.com/
 
+## License
+
+Licensed under the MIT license ([LICENSE-MIT](./LICENSE-MIT) or <http://opensource.org/licenses/MIT>).
+
 ## Release Notes
 
 ### 0.1.0
