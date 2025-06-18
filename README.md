@@ -28,11 +28,13 @@ tips. Set both to `0` to completely disable the showing of tips on file saves.
 
 Beautiful [Carpenter icon] created by [imaginationlol], sourced from [Flaticon].
 
-TODO: approval from Prag Prog.
+Tips from the [Pragmatic Programmer] book shared with kind permission of the [authors].
+Go checkout other cool books from the [Pragmatic Bookshelf](https://pragprog.com/).
 
 [Carpenter icon]: https://www.flaticon.com/free-icon/wood-plane_4854604?term=wood+plane&page=1&position=30&origin=search&related_id=4854604
 [imaginationlol]: https://www.flaticon.com/authors/imaginationlol
 [Flaticon]: https://www.flaticon.com/
+[authors]: https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/#author
 
 ## License
 
