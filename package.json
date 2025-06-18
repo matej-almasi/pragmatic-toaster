@@ -2,13 +2,23 @@
   "name": "pragmatic-toaster",
   "displayName": "Pragmatic Toaster",
   "description": "Display a random Pragmatic Programmer tip every few file saves.",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "matej-almasi",
   "engines": {
     "vscode": "^1.101.0"
   },
+  "license": "MIT",
   "categories": [
-    "Education"
+    "Education",
+    "Other"
   ],
+  "keywords": [
+    "tips",
+    "pragmatic",
+    "notification",
+    "toast"
+  ],
+  "icon": "images/wood-plane.png",
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -39,6 +49,15 @@
       }
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matej-almasi/pragmatic-toaster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matej-almasi/pragmatic-toaster/issues",
+    "email": "almasi.matej@protonmail.com"
+  },
+  "homepage": "https://github.com/matej-almasi/pragmatic-toaster/blob/main/README.md",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
