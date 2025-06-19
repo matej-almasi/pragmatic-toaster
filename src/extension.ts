@@ -1,6 +1,5 @@
-import * as fs from "fs";
-import path from "path";
 import * as vscode from "vscode";
+import { tips } from "./tips";
 
 const extensionName = "pragmaticToaster";
 const minConfigName = "minSaves";
@@ -13,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     "pragmatic-toaster.pragmaticTip",
     () => {
-      showPragmaticTip(context);
+      showPragmaticTip(tips[getRandomInRange(0, tips.length - 1)]);
       nextTipCountdown = getNextCountdown();
     }
   );
@@ -25,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
     --nextTipCountdown;
 
     if (nextTipCountdown === 0) {
-      showPragmaticTip(context);
+      showPragmaticTip(tips[getRandomInRange(0, tips.length - 1)]);
       nextTipCountdown = getNextCountdown();
     }
   });
@@ -61,66 +60,24 @@ function getNextCountdown(): number {
     return -1;
   }
 
-  return getRandomFromRange(min, max);
+  return getRandomInRange(min, max);
 }
 
-function getRandomFromRange(lower: number, upper: number) {
+function getRandomInRange(lower: number, upper: number) {
   const range = upper - lower;
   const offset = lower;
   return Math.round(Math.random() * range + offset);
 }
 
-function showPragmaticTip(context: vscode.ExtensionContext) {
-  let tips;
-
-  try {
-    tips = loadTips(context);
-  } catch (err) {
-    // should never happen as we control the extension files,
-    // but one can never be sure...
-    showFailedLoadingMessage(err);
-    return;
-  }
-
-  const tip = tips.pop();
+function showPragmaticTip(tip: Tip) {
   vscode.window.showInformationMessage(
     `${tip?.title}: ${tip?.extra} ${tip?.number}.`,
     "OK"
   );
 }
 
-function showFailedLoadingMessage(err: unknown) {
-  const message = "Failed loading Pragmatic Tips";
-  console.error(`${message}: ${err}`);
-  vscode.window.showErrorMessage(message);
-}
-
 interface Tip {
   title: string;
   extra: string;
   number: string;
-}
-
-function loadTips(context: vscode.ExtensionContext): Tip[] {
-  const tipsPath = path.join(context.extensionPath, "resources", "tips.json");
-
-  const data = fs.readFileSync(tipsPath);
-  const parsed = JSON.parse(data.toString());
-
-  if (!parsed.length) {
-    throw RangeError("No Tips found in the Tip File!");
-  }
-
-  return randomPermutation(parsed.length).map((i) => parsed[i]);
-}
-
-function randomPermutation(n: number) {
-  const arr = Array.from({ length: n }, (_, i) => i);
-
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-
-  return arr;
 }
