@@ -55,7 +55,8 @@ function getNextCountdown(): number {
   if (max < min) {
     vscode.window.showWarningMessage(
       `Pragmatic Toaster ${maxConfigName} is lower than ${minConfigName}.\
-       No toasts for today, until you fix the settings!`
+       No toasts for today, until you fix the settings!`,
+      "OK"
     );
     return -1;
   }
