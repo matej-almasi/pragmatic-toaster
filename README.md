@@ -19,7 +19,7 @@ Display a random Pragmatic tip on demand by typing a command . . .
 This extension contributes the following settings:
 
 - `pragmaticToaster.minSaves`: Minimum number of file saves before a Pragmatic tip is shown.
-- `pragmaticToaster.minSaves`: Maximum number of file saves before a Pragmatic tip is shown.
+- `pragmaticToaster.maxSaves`: Maximum number of file saves before a Pragmatic tip is shown.
 
 Set both `minSaves` and `maxSaves` to the same number to set a fixed interval for showing the
 tips. Set both to `0` to completely disable the showing of tips on file saves.
@@ -41,6 +41,10 @@ Go checkout other cool books from the [Pragmatic Bookshelf](https://pragprog.com
 Licensed under the MIT license ([LICENSE](./LICENSE) or <http://opensource.org/licenses/MIT>).
 
 ## Release Notes
+
+### 0.1.1
+
+Fixed typo (minSaves/maxSaves) in README.
 
 ### 0.1.0
 

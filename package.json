@@ -2,7 +2,7 @@
   "name": "pragmatic-toaster",
   "displayName": "Pragmatic Toaster",
   "description": "Display a random Pragmatic Programmer tip every few file saves.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "matej-almasi",
   "engines": {
     "vscode": "^1.101.0"
