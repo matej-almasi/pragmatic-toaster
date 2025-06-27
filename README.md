@@ -42,6 +42,10 @@ Licensed under the MIT license ([LICENSE](./LICENSE) or <http://opensource.org/l
 
 ## Release Notes
 
+### 0.1.2
+
+Lower the minimum required version VS Code engine.
+
 ### 0.1.1
 
 Fixed typo (minSaves/maxSaves) in README.
